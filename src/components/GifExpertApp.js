@@ -2,6 +2,10 @@ import React, { Fragment, useState } from 'react';
 import AddCategory from './AddCategory';
 import GifGrid from './GifGrid';
 import SelColores from './SelColores';
+import Contador from './Contador';
+import ContadorConHook from './ContadorConHook';
+import Coordenadas from './Coordenadas';
+import Coords from '../hooks/useCoordenadasConHooks';
 
 const GifExpertApp = () => {
 
@@ -18,6 +22,15 @@ const GifExpertApp = () => {
                 <SelColores color={color => setcolor(color)}></SelColores>
                 <hr></hr>
                 <p>Color actual: { color} </p>
+
+                <Contador color={color} ></Contador>
+                <ContadorConHook></ContadorConHook> 
+                <hr/>
+                <Coordenadas></Coordenadas>
+
+                <hr></hr>
+                <p>Información del HOOK Coords (useCoordenadasConHooks):</p>
+                <Coords></Coords>
                 
                 <ol>
                     {
